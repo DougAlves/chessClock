@@ -37,9 +37,13 @@ class _MatchPageState extends State<MatchPage> {
                 decoration: const BoxDecoration(color: Colors.black),
                 child: Center(
                   child: Observer(builder: (context) {
-                    return Text(
-                      matchStore.blackTime,
-                      style: const TextStyle(color: Colors.white, fontSize: 40),
+                    return RotatedBox(
+                      quarterTurns: 2,
+                      child: Text(
+                        matchStore.blackTime,
+                        style:
+                            const TextStyle(color: Colors.white, fontSize: 40),
+                      ),
                     );
                   }),
                 ),
